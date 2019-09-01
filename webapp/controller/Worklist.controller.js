@@ -179,6 +179,10 @@ sap.ui.define([
 				aFilters.push(oFilter);
 			}
 			oBinding.filter(aFilters);
+		},
+		
+		onAddActionPress: function() {
+			this.getRouter().navTo('add');
 		}
 
 	});

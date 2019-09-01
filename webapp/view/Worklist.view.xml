@@ -132,8 +132,9 @@
 		<semantic:sendEmailAction>
 			<semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
 		</semantic:sendEmailAction>
-
-
+		<semantic:addAction>
+			<semantic:AddAction id="addProductAction" press="onAddActionPress" />
+		</semantic:addAction>
 	</semantic:SemanticPage>
 
 </mvc:View>

@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+	<Panel id="panelSupplier" expandable="{device>/isPhone}" expanded="{device>isNotPhone}" headerText="Supplier Details" width="auto" class="sapUiResponsiveMargin">
+		<content>
+			<List id="ShortProductList">
+				<items>
+					<StandardListItem title="{ToSupplier/CompanyName}" icon="sap-icon://building"/>
+					<StandardListItem title="{ToSupplier/EmailAddress}" icon="sap-icon://email"/>
+					<StandardListItem title="{ToSupplier/WebAddress}" icon="sap-icon://world"/>
+					<StandardListItem title="{ToSupplier/PhoneNumber}" icon="sap-icon://phone"/>
+					<StandardListItem title="{ToSupplier/Address/City}" icon="sap-icon://map"/>
+				</items>
+			</List>
+		</content>
+	</Panel>
+</core:FragmentDefinition>

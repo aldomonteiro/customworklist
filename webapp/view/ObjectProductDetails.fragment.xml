@@ -1,0 +1,18 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+		<Panel id="panelProduct" expandable="{device>/isPhone}" expanded="{device>isNotPhone}" headerText="Product Details" width="auto" class="sapUiResponsiveMargin">
+		<content>
+			<f:SimpleForm id="SimpleFormDisplay354" editable="false" layout="ResponsiveGridLayout">
+				<f:content>
+					<Label text="Name"/>
+					<Text id="nameText" text="{Name}"/>
+					<Label text="Category"/>
+					<Text text="{Category}"/>
+					<Label text="Weight"/>
+					<Text text="{WeightMeasure} {WeightUnit}"/>
+					<Label text="Price"/>
+					<ObjectNumber number="{ path: 'Price', formatter: '.formatter.numberUnit' }" unit="{CurrencyCode}"/>
+				</f:content>
+			</f:SimpleForm>
+		</content>
+	</Panel>
+</core:FragmentDefinition>

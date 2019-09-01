@@ -1,41 +1,18 @@
-<mvc:View
-	controllerName="my.customworklist.CustomWorklist.controller.Object"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:semantic="sap.f.semantic">
-
-	<semantic:SemanticPage
-		id="page"
-		headerPinnable="false"
-		toggleHeaderOnTitleClick="false"
-		busy="{objectView>/busy}"
+<mvc:View controllerName="my.customworklist.CustomWorklist.controller.Object" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.f.semantic" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core">
+	<semantic:SemanticPage id="page" headerPinnable="false" toggleHeaderOnTitleClick="false" busy="{objectView>/busy}"
 		busyIndicatorDelay="{objectView>/delay}">
-
 		<semantic:titleHeading>
-			<Title
-				text="{ProductID}"
-				level="H2"/>
+			<Title text="{ProductID}" level="H2"/>
 		</semantic:titleHeading>
-
-		<semantic:headerContent>
-			<ObjectAttribute
-				text="{Name}" />
-			<ObjectAttribute
-				text="{SupplierName}" />
-			<ObjectNumber
-				number="{
-					path: 'Price',
-					formatter: '.formatter.numberUnit'
-				}"
-				unit="{CurrencyCode}"
-			/>
-		</semantic:headerContent>
-
+		<semantic:content>
+			<VBox class="sapUiSmallMargin">
+				<core:Fragment fragmentName="my.customworklist.CustomWorklist.view.ObjectProductDetails" type="XML" />
+				<core:Fragment fragmentName="my.customworklist.CustomWorklist.view.ObjectSupplierDetails" type="XML" />
+			</VBox>
+		</semantic:content>
 		<semantic:sendEmailAction>
 			<semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
 		</semantic:sendEmailAction>
-
-
 	</semantic:SemanticPage>
-
 </mvc:View>
