@@ -5,14 +5,14 @@
 		<semantic:titleHeading>
 			<Title text="{ProductID}" level="H2"/>
 		</semantic:titleHeading>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
+		</semantic:sendEmailAction>
 		<semantic:content>
 			<VBox class="sapUiSmallMargin">
 				<core:Fragment fragmentName="my.customworklist.CustomWorklist.view.ObjectProductDetails" type="XML" />
 				<core:Fragment fragmentName="my.customworklist.CustomWorklist.view.ObjectSupplierDetails" type="XML" />
 			</VBox>
 		</semantic:content>
-		<semantic:sendEmailAction>
-			<semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
-		</semantic:sendEmailAction>
 	</semantic:SemanticPage>
 </mvc:View>
